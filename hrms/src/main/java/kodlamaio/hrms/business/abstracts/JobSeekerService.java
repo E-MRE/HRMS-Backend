@@ -10,6 +10,8 @@ public interface JobSeekerService {
 	
 	DataResult<List<JobSeeker>> getAll();
 	
+	DataResult<JobSeeker> getJobSeekerById(int jobSeekerId);
+	
 	Result add(JobSeeker jobSeeker);
 	
 	Result checkAlreadyExistIdentity(String nationalIdentity);

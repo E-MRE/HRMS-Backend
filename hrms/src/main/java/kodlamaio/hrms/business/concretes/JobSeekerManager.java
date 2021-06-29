@@ -77,7 +77,9 @@ public class JobSeekerManager implements JobSeekerService {
 		
 		return new ErrorResult("Kimlik numarası kullanılabilir");
 	}
-	
-	
 
+	@Override
+	public DataResult<JobSeeker> getJobSeekerById(int jobSeekerId) {
+		return new SuccessDataResult<JobSeeker>(jobSeekerDao.findByJobSeekerId(jobSeekerId),"Aday getirildi");
+	}
 }
